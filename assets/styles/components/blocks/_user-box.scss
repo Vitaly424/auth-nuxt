@@ -1,0 +1,18 @@
+.user-box {
+   background-color: rgba(0, 0, 0, 0.2);
+   min-height: 300px;
+   padding: 40px;
+
+   &__title {
+      color: $color-black;
+      font-size: 30px;
+      text-align: center;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 700;
+
+      @include w-to($screen-md) {
+         font-size: 20px;
+      }
+   }
+}

@@ -1,0 +1,15 @@
+.title {
+  font-family: $font-family-dmsans;
+  font-size: 33px;
+  line-height: 1.03;
+  color: #404040;
+  font-weight: 700;
+  
+  @include w-to($screen-md) {
+    font-size: 26px;
+  }
+
+  span {
+    color: $color-gray5;
+  }
+}

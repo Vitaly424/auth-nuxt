@@ -1,0 +1,38 @@
+.hero {
+  .container {
+    @include w-to($screen-md) {
+      padding: 0;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    min-height: 442px;
+
+    background-image: url("@/static/main-img.png");
+    background-repeat: no-repeat;
+  }
+
+  &__title {
+    max-width: 750px;
+    padding: 0 20px;
+    width: 100%;
+
+    position: absolute;
+    left: 50%;
+    right: 0;
+    bottom: 88px;
+    transform: translateX(-50%);
+
+    font-family: $font-family-dmsans;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.03;
+    text-align: center;
+    color: $color-white;
+
+    @include w-to($screen-md) {
+      font-size: 19px;
+    }  
+  }
+}

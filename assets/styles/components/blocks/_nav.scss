@@ -1,0 +1,65 @@
+.nav {
+  display: flex;
+  align-items: center;
+
+  @include w-to($screen-md) {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    z-index: 20;
+
+    width: 100%;
+    padding: 20px 15px;
+    
+    background-color: $color-black;
+    opacity: 0;
+
+ 
+    &.m-active {
+      top: 0;
+      left: 0;
+      opacity: 1;
+    }
+  }
+
+  &__auth,
+  &__register {
+    font-family: $font-family-source;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &__auth {
+    margin-right: 23px;
+    color: $color-gray;
+
+    transition: color $transition-normal;
+    @include hover {
+      color: $color-black;
+    }
+
+    @include w-to($screen-md) {
+      color: $color-white;
+    }
+  }
+
+  &__register {
+    color: $color-black;
+
+    padding: 12px;
+    border: thin solid #434343;
+    border-radius: 3px;
+
+    transition: background-color $transition-normal, color $transition-normal;
+    @include hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+
+    @include w-to($screen-md) {
+      color: $color-white;
+      border: thin solid $color-white;
+    }
+  }
+}
